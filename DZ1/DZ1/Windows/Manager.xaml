@@ -1,0 +1,44 @@
+﻿<Window x:Class="DZ1.Windows.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DZ1.Windows"
+        mc:Ignorable="d"
+        Title="Менеджер" Height="523.5" Width="395" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <StackPanel Orientation="Horizontal" Height="200" Width="350" VerticalAlignment="Top" Margin="10">
+            <Image Height="150" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
+              Source="/Resources/manager.png">
+            </Image>
+            
+            
+
+            <StackPanel Orientation="Vertical" Height="190" Width="177" VerticalAlignment="Top">
+                <Label  Height="30" Width="150" Content="Менеджер" FontSize="17" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+                <StackPanel Orientation="Horizontal"  Margin="5,25,0,25" Width="170" HorizontalAlignment="Left">
+                    <Label Height="30" Width="60" Content="Логин:" FontSize="17" HorizontalAlignment="Left" Margin="5" HorizontalContentAlignment="Left"/>
+                    <Label Height="30" Width="100" Margin="1" x:Name="LabelManagerLogin" FontSize="15" Content="login1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+
+                </StackPanel>
+                <Button Background="Red" Width="150" Height="30" Content="Оформить новый заказ" VerticalAlignment="Bottom" FontSize="13" Click="Button_Click"/>
+
+            </StackPanel>
+
+
+        </StackPanel>
+        <DataGrid Width="350" Height="280" AutoGenerateColumns="True" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10" x:Name="DataDridManager"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Номер заказа" FontSize="9"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Наименование"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Кол-во товара"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Цена"/>
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+    </Grid>
+</Window>
