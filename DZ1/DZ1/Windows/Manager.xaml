@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DZ1.Windows"
         mc:Ignorable="d"
-        Title="Менеджер" Height="523.5" Width="395" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Менеджер" Height="601.5" Width="396.5" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,2,10">
 
         <StackPanel Orientation="Horizontal" Height="200" Width="350" VerticalAlignment="Top" Margin="10">
             <Image Height="150" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
               Source="/Resources/manager.png">
             </Image>
-            
-            
+
+
 
             <StackPanel Orientation="Vertical" Height="190" Width="177" VerticalAlignment="Top">
                 <Label  Height="30" Width="150" Content="Менеджер" FontSize="17" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
@@ -28,7 +28,7 @@
 
 
         </StackPanel>
-        <DataGrid Width="350" Height="280" AutoGenerateColumns="True" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10" x:Name="DataDridManager"
+        <DataGrid Width="350" Height="280" AutoGenerateColumns="True" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" x:Name="DataDridManager"
                   >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Номер заказа" FontSize="9"/>
@@ -36,9 +36,11 @@
                 <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Кол-во товара"/>
                 <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Цена"/>
             </DataGrid.Columns>
-
-
-
         </DataGrid>
+        <ComboBox Height="20" Width="150"  x:Name="ManagerComboBox" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,215,0,0" SelectionChanged="ManagerComboBox_SelectionChanged">
+
+            <TextBlock>Номер заказа</TextBlock>
+            <TextBlock>Наименование</TextBlock>
+        </ComboBox>
     </Grid>
 </Window>

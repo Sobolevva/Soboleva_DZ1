@@ -37,7 +37,7 @@ namespace DZ1
                 ManagerWindow.Show();
              
             }
-            else MessageBox.Show("Введён неверный пароль и(или) логин!");
+            else MessageBox.Show("Введён неверный пароль и(или) логин!","Ошибка!",MessageBoxButton.OK,MessageBoxImage.Error);
 
            
             
@@ -50,15 +50,21 @@ namespace DZ1
 
         private void CheckBox_Click(object sender, RoutedEventArgs e)
         {
-            if  (MainPasswordBox.PasswordChar == '*')
-            {
-               MainPasswordBox.PasswordChar = '\0';
-           }
-           else
-         
-              MainPasswordBox.PasswordChar = '*';
-
             
+            if (MainCheckBox.IsChecked.Value)
+            {
+                MainTextPasswordBox.Text = MainPasswordBox.Password; 
+                MainTextPasswordBox.Visibility = Visibility.Visible; 
+                MainPasswordBox.Visibility = Visibility.Hidden; 
+            }
+            else
+            {
+                MainPasswordBox.Password = MainTextPasswordBox.Text; 
+                MainTextPasswordBox.Visibility = Visibility.Hidden; 
+                MainPasswordBox.Visibility = Visibility.Visible; 
+            }
+
+
         }
     }
 }

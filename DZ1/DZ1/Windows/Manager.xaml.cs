@@ -31,5 +31,9 @@ namespace DZ1.Windows
            NewOrders NewOrdersWindow = new NewOrders();
             NewOrdersWindow.Show();
         }
+
+       
+
+        
     }
 }
