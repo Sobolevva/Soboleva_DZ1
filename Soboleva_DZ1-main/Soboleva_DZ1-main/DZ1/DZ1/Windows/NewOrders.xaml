@@ -1,0 +1,45 @@
+﻿<Window x:Class="DZ1.Windows.NewOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DZ1.Windows"
+        mc:Ignorable="d"
+        Title="Новый заказ" Height="436.5" Width="290" WindowStartupLocation="CenterScreen">
+
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Width="100" Height="50" VerticalAlignment="Top" Margin="10">
+            <Label Content="Введите ФИО:" VerticalAlignment="Center" HorizontalAlignment="Center">
+            </Label>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Top" Margin="3,10,10,0">
+            <TextBox Margin="5"  Style="{StaticResource StyleTextBox}" >
+
+            </TextBox>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="40" Width="90" Margin="63,0,67,26" Grid.ColumnSpan="2">
+            <Button Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Height="30" Width="70" Content="Оформить" Foreground="White" Background="Red">
+
+            </Button>
+        </StackPanel>
+
+        <DataGrid x:Name="DataGridNewOrder" Height="236" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="20,0,10,93" ColumnWidth="SizeToHeader" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="№товара" FontSize="10" MaxWidth="100"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Наименование"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Цена"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+    </Grid>
+</Window>
